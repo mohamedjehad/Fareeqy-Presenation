@@ -211,69 +211,6 @@
             font-weight: 600;
         }
 
-        .print-buttons {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 1000;
-        }
-
-        .print-button {
-            padding: 12px 25px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-
-        .print-button:hover {
-            background: #7c8ef0;
-            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
-        }
-
-        .show-all-button {
-            padding: 12px 25px;
-            background: #764ba2;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(118, 75, 162, 0.4);
-        }
-
-        .show-all-button:hover {
-            background: #8a5bb8;
-            box-shadow: 0 6px 16px rgba(118, 75, 162, 0.5);
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 30px 0;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-        }
-
-        .highlight-box h3 {
-            color: white;
-            border: none;
-            margin: 0 0 20px 0;
-        }
-
-        .highlight-box p {
-            color: white;
-        }
-
         @media print {
             body {
                 background: #000000;
@@ -286,7 +223,7 @@
                 page-break-after: always;
                 min-height: auto;
             }
-            .navigation, .print-buttons {
+            .navigation {
                 display: none;
             }
         }
@@ -302,7 +239,10 @@
     </style>
 </head>
 <body>
-    
+    <div class="print-buttons">
+        <button class="print-button" onclick="printPDF()">📥 Download PDF</button>
+        <button class="show-all-button" onclick="showAllSlides()">📄 Show All</button>
+    </div>
 
     <div class="container">
         <!-- Slide 1: Cover -->
